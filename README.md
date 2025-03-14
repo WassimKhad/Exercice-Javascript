@@ -1,3 +1,60 @@
+  /v1/know-grow-graphs:
+    get:
+      parameters:
+        - $ref: '#/components/parameters/ExecContextDataInsightParam'
+        - $ref: '#/components/parameters/YearDataInsightParam'
+        - $ref: '#/components/parameters/MonthDataInsightParam'
+        - $ref: '#/components/parameters/ChannelDataInisghtParam'
+      operationId: retrieveKnowGrowDataInsight
+      summary: >-
+       Retrieve the merchant data  that are aggregated by a given  period and channel.
+      description: >
+      
+        - Based on the filters, returning all the merchant data to generate graphs of the KNOW and GROW services.
+        
+        - If no criteria is met, an empty list of graphs data will be returned.
+      tags:
+        - Data insights
+      responses:
+        '200':
+          description: A list of graphs about the Know and Grow services.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataInsightResponse'
+        '400':
+          description: Bad request.
+          content:
+            application/json: 
+              schema:
+                $ref: '#/components/schemas/BaasExceptionHttpResponse'                
+        '401':
+          description: Unauthorized. You must first authenticate to get a token.
+          content:
+            application/json:
+              schema:
+                type: object
+        '403':
+          description: Missed scope or insufficient permission
+          content:
+            application/json: 
+              schema:
+                $ref: '#/components/schemas/BaasExceptionHttpResponse'
+              examples:
+                AccessDeniedError: 
+                  $ref: '#/components/examples/AccessDeniedErrorExample'
+        '500':
+          description: Internal server error
+          content:
+            application/json: 
+              schema:
+                $ref: '#/components/schemas/BaasExceptionHttpResponse'
+    
+    
+    
+    
+    
+    
     DataInsightResponse:
       type: object
       required:
