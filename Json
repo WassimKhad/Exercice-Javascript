@@ -12,3 +12,13 @@ Informations supplémentaires:
 Première réponse: Les items contiennent des informations sur le canal (channel).
 Deuxième réponse: Les canaux contiennent des informations sur les moyennes des paniers (basketAverageClient, basketAverageSector).
 En résumé, la première réponse organise les items directement sous le graphique avec des informations sur les canaux incluses dans chaque item, tandis que la deuxième réponse organise les items par canal, avec des informations sur les moyennes des paniers incluses dans chaque canal.
+
+
+
+
+Pourquoi utiliser operationId ?
+Génération de code: Lors de la génération de code client ou serveur à partir de la spécification OpenAPI, l'operationId est utilisé pour nommer les méthodes générées. Par exemple, dans un client API généré, vous pourriez avoir une méthode getUsers().
+
+Clarté et maintenance: Avoir un operationId unique pour chaque opération facilite la maintenance et la compréhension de l'API. Cela permet de référencer facilement une opération spécifique sans ambiguïté.
+
+Documentation: Dans la documentation générée, l'operationId peut être utilisé pour créer des liens directs vers des opérations spécifiques, facilitant ainsi la navigation et l'utilisation de la documentation.
