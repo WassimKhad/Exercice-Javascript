@@ -431,4 +431,4 @@ export default function* rootSaga() {
   ]);
 }
 Architecture finale
-UI-REDUX-SAGA.png
+![image](https://github.com/user-attachments/assets/2c448e2e-eabc-4557-a6e4-2bc748f1fd1a)
